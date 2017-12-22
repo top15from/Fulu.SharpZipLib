@@ -1,24 +1,9 @@
-using ICSharpCode.SharpZipLib.Core;
-using ICSharpCode.SharpZipLib.Zip;
-
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
-    namespace Fulu.SharpZipLib
-    {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-                CreateZipFile(@"D:\FTP下载\官方文档.zip", "12345678", @"F:\文档\官方文档");
-                ExtractZipFile(@"D:\FTP下载\官方文档.zip", "12345678", @"D:\FTP下载\官方文档");
-                Console.ReadLine();
-            }
+            CreateZipFile(@"D:\FTP下载\官方文档.zip", "12345678", @"F:\文档\官方文档");
+            ExtractZipFile(@"D:\FTP下载\官方文档.zip", "12345678", @"D:\FTP下载\官方文档");
+            Console.ReadLine();
+        }
 
         private static void CreateZipFile(string outPathname, string password, string folderName)
         {
@@ -130,5 +115,3 @@ using ICSharpCode.SharpZipLib.Zip;
                 }
             }
         }
-    }
-}
